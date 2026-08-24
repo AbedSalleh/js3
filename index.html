@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>js3 — Grid Tactics Prototype</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2310141c'/%3E%3Cpath d='M16 5l9 4v8c0 6-4 9-9 10-5-1-9-4-9-10V9z' fill='%234d8fe8'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <div id="app">
+    <canvas id="scene"></canvas>
+    <div id="overlay"></div>
+
+    <header id="topbar">
+      <div class="topbar__left">
+        <span id="phase" class="phase">Player Phase</span>
+        <span id="turn" class="turn">Turn 1</span>
+      </div>
+      <div class="topbar__mid" id="objective"></div>
+      <button id="end-turn" type="button">End Turn</button>
+    </header>
+
+    <aside id="unit-panel" class="panel" hidden>
+      <div class="panel__head">
+        <span id="unit-name"></span>
+        <span id="unit-class" class="muted"></span>
+      </div>
+      <div class="hpbar"><div id="unit-hp-fill"></div></div>
+      <div id="unit-hp-text" class="muted"></div>
+      <dl id="unit-stats" class="stats"></dl>
+      <div id="unit-weapon" class="weapon"></div>
+    </aside>
+
+    <aside id="terrain-panel" class="panel panel--small" hidden>
+      <div id="terrain-name"></div>
+      <div id="terrain-detail" class="muted"></div>
+    </aside>
+
+    <div id="action-menu" class="menu" hidden>
+      <button type="button" data-action="attack">Attack</button>
+      <button type="button" data-action="wait">Wait</button>
+      <button type="button" data-action="cancel" class="menu__cancel">Cancel</button>
+    </div>
+
+    <div id="forecast" class="forecast" hidden></div>
+
+    <section id="log" class="log"></section>
+
+    <div id="result" class="result" hidden>
+      <h1 id="result-title"></h1>
+      <p id="result-note" class="muted"></p>
+      <button id="restart" type="button">Play again</button>
+    </div>
+
+    <footer id="help">
+      <b>Left-click</b> unit → tile to move · <b>Right-click</b> cancel/undo ·
+      <b>Right-drag</b> rotate · <b>Wheel</b> zoom · <b>Arrows</b> pan
+    </footer>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "js3-tactics",
+  "version": "1.0.0",
+  "description": "Browser-playable grid tactics prototype built on three.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173",
+    "simulate": "node tools/simulate.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbedSalleh/js3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AbedSalleh/js3/issues"
+  },
+  "homepage": "https://github.com/AbedSalleh/js3#readme",
+  "dependencies": {
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "vite": "^8.2.2"
+  },
+  "private": true,
+  "type": "module"
+}
